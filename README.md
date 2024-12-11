@@ -56,7 +56,6 @@ We do the following in this section:
 #### 1. Setup an account on Vast.AI
 Vast.ai setup requires account and credit card setup. It also requires you to setup an rsa key pair in order to securely connect to your instance. 
 
-![]([https://github.com/katarzynasornat/llm-serving-with-vastai/imgs/setup1.png](https://github.com/katarzynasornat/llm-serving-with-vastai/blob/main/imgs/setup1.png)) 
-
+![setup1](https://github.com/user-attachments/assets/c6bc7b40-5875-43e6-a7e4-453fd72bc9df)
 
 
