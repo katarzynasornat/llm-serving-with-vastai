@@ -55,7 +55,13 @@ We do the following in this section:
 
 #### 1. Setup an account on Vast.AI
 Vast.ai setup requires account and credit card setup. It also requires you to setup an rsa key pair in order to securely connect to your instance. 
+In order to sign you need to go to vast.ai website, then choose one of two options: on-demand instances or interruptable instances. Next you will see what is presented below:
 
 ![setup1](https://github.com/user-attachments/assets/c6bc7b40-5875-43e6-a7e4-453fd72bc9df)
 
+You need to click top right blue button "SIGN IN" and use your e-mail or google/github account to create a user. Next what you need to do is to top up your credentials. To try it out I recommend to ad as little as $5.
+
+When this is done, you are ready for the next step.
+
+#### 2. Create SSH key pair
 
