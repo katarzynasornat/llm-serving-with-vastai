@@ -79,5 +79,9 @@ SSH (Secure Shell) is a protocol for securely connecting to remote servers or de
 
 [Screencast from 11.12.2024 11:48:56.webm](https://github.com/user-attachments/assets/8362417b-0753-4657-9e3a-9959597e69d9)
 
+Our SSH key has been created. At all steps where I do not write in the terminal, I am pressing Enter button. We use a command `cat` to get the key later and copy it while creating instance on vast.ai.
+
+### 3. Create an GPU instance from template to serve Mistral vLLM quantized version
+
 
 
