@@ -47,8 +47,15 @@ Generaly, the higher any of these values, the more expensive to rent the GPUs.
     
 ### End-to-end example
 We do the following in this section:
-1. Setup and account on Vast.AI
+1. Setup an account on Vast.AI
 2. Create SSH key pair
 3. Create an GPU instance from the template to serve Mistral vLLM quantized version.
 4. Test the throughput by simulating concurrent requests
 5. Serving a function calling model
+
+#### 1. Setup an account on Vast.AI
+Vast.ai setup requires account and credit card setup. It also requires you to setup an rsa key pair in order to securely connect to your instance. 
+
+
+
+
