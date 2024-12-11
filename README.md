@@ -104,10 +104,11 @@ Testing the Vast.ai TGI endpoint:
 This change is necessary because the vLLM image runs on port 8000 (whereas the Vast.ai default ssh command is to connect to the port 8080)
 6. Enter the ssh command into your terminal to connect to the instance via ssh.
 7. Once your pod is up and running (check the logs say that the host is defaulting to 0.0.0.0.) you can now open a new terminal and make requests to:
-```curl http://localhost:8000/generate \
-      -X POST \
-      -d '{"inputs": "What is Deep Learning?", "parameters":{"max_new_tokens":20}}' \
-      -H 'Content-Type: application/json'
+```
+curl http://localhost:8000/generate \
+   -X POST \
+   -d '{"inputs": "What is Deep Learning?", "parameters":{"max_new_tokens":20}}' \
+   -H 'Content-Type: application/json'
 ```
 
 
