@@ -77,4 +77,7 @@ SSH (Secure Shell) is a protocol for securely connecting to remote servers or de
 + The public key (e.g., `id_rsa.pub`) is copied to the server in the `~/.ssh/authorized_keys` file, enabling authentication.
 + The private key (e.g., `id_rsa`) remains on your local machine and is used to authenticate connections.
 
+[Screencast from 11.12.2024 11:48:56.webm](https://github.com/user-attachments/assets/8362417b-0753-4657-9e3a-9959597e69d9)
+
+
 
