@@ -79,6 +79,14 @@ SSH (Secure Shell) is a protocol for securely connecting to remote servers or de
 
 [Screencast from 11.12.2024 11:48:56.webm](https://github.com/user-attachments/assets/8362417b-0753-4657-9e3a-9959597e69d9)
 
+A few notes:
+- you want to set up an ssh key in your .ssh folder. To get to this folder from a terminal on Mac or Linux , do:
+  `cd ~./ssh`
+- you will be prompted for a key name, make it something short and specific for vast.ai (I have left default)
+- when passing a public key to vast.ai make sure you included address at the end, e.g. "bob@xyz". You need to pass entire public key that is shown in the key file, it will look like similar to the one below:
+`ssh-rsa YKMSKDhjdhlkdlkshdskhjkJSKSKJWKJWJKMMMNSBDJDnsmnsatsyuYQBjjhsmshjkJHKHSKJGshjKgsjhjklwkq bob@xyz`
+- test out that your key is working by starting up a cheap instance using vLLM template and try to connect to it via ssh.
+
 Our SSH key has been created. At all steps where I do not write in the terminal, I am pressing Enter button. We use a command `cat` to get the key later and copy it while creating instance on vast.ai.
 
 ### 3. Create an GPU instance from template to serve Mistral vLLM quantized version
