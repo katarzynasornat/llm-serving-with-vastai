@@ -64,4 +64,17 @@ You need to click top right blue button "SIGN IN" and use your e-mail or google/
 When this is done, you are ready for the next step.
 
 #### 2. Create SSH key pair
+SSH (Secure Shell) is a protocol for securely connecting to remote servers or devices, and SSH keys enable password-less authentication for enhanced security. On Linux one can use the command `ssh-keygen -t rsa` to generate an SSH key pair (public and private keys) utilizing the RSA algorithm (`-t rsa` specifies the type of key to generate- here, it selects the RSA algorithm).
+
+**What Happens During Execution**:
++ Command Execution: When you run the command, the system prompts you to specify a file location to save the generated keys (by default, it saves them in `~/.ssh/`).
++ Passphrase (Optional): You can set a passphrase to secure the private key further. If you skip this step, the private key will have no additional encryption.
++ Output: Two files are created:
+   + Private Key: (e.g., `id_rsa`) This file contains the private key and should remain confidential.
+   + Public Key: (e.g., `id_rsa.pub`) This file contains the public key and is shared with remote servers for authentication purposes.
+ 
+**Practical Usage**:
++ The public key (e.g., `id_rsa.pub`) is copied to the server in the `~/.ssh/authorized_keys` file, enabling authentication.
++ The private key (e.g., `id_rsa`) remains on your local machine and is used to authenticate connections.
+
 
