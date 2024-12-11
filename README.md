@@ -90,6 +90,25 @@ A few notes:
 Our SSH key has been created. At all steps where I do not write in the terminal, I am pressing Enter button. We use a command `cat` to get the key later and copy it while creating instance on vast.ai.
 
 ### 3. Create an GPU instance from template to serve Mistral vLLM quantized version
+#### Deploying an API with Text Generation Inference (TGI)
+
+One click templates make a use of docker images to automate installation.
+1. Start with a [vLLM template](https://cloud.vast.ai/?ref_id=180404&creator_id=180404&name=Mistral) that runs text generation inference.
+2. If you want to run quantized version use `--quantization awk --dtype half` to run it using AWQ model. Use `--revision awq` if you are using the files in the awq branch of the repo
+3. If using a gated repo, you will also need to pass your HuggingFave access token by appending `-e HUGGING_FACE_HUB_TOKEN=YOUR_TOKEN` to the end of the Docker Options (when setting up the vast.ai/runpod instance). You get generate and get an access token from your Settings withing HuggingFace.
+
+Testing the Vast.ai TGI endpoint:
+4. Click on the blue button when the instance has started up. You may first wish to view the logs to check that everything is running, normaly it takes a while. You will know when you see that the host is 0.0.0.0. in the logs)
+5. You will see a command for ssh'ing into the instance. Copy paste that command but change the port mapping to:\
+`-L 8000:localhost:8000`\
+This change is necessary because the vLLM image runs on port 8000 (whereas the Vast.ai default ssh command is to connect to the port 8080)
+6. Enter the ssh command into your terminal to connect to the instance via ssh.
+7. Once your pod is up and running (check the logs say that the host is defaulting to 0.0.0.0.) you can now open a new terminal and make requests to:
+```curl http://localhost:8000/generate \
+      -X POST \
+      -d '{"inputs": "What is Deep Learning?", "parameters":{"max_new_tokens":20}}' \
+      -H 'Content-Type: application/json'
+```
 
 
-
+#### Deploying an API with vLLM
